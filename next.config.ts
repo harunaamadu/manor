@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
-import * as os from 'os';
+import * as os from "os";
 
 function getLocalIPs() {
   const interfaces = os.networkInterfaces();
-  const ips = ['localhost'];
+  const ips = ["localhost"];
   for (const iface of Object.values(interfaces)) {
     for (const config of (iface || []) as os.NetworkInterfaceInfo[]) {
-      if (config.family === 'IPv4' && !config.internal) {
+      if (config.family === "IPv4" && !config.internal) {
         ips.push(config.address);
       }
     }
@@ -26,6 +26,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "assets.grok.com",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
     ],
   },

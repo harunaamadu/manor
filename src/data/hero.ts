@@ -3,7 +3,7 @@ interface TitleProps {
   titleSpan?: string;
 }
 
-type HeroSlideProps = {
+export type HeroSlideProps = {
   id: number;
   titles: TitleProps;
   description: string;
@@ -28,7 +28,7 @@ export const SLIDES: HeroSlideProps[] = [
     primaryHref: "/shop",
     secondaryCta: "Collection",
     secondaryHref: "/collections",
-    imageUrl: "/assets/hero/hero_01.png",
+    imageUrl: "https://res.cloudinary.com/dqylma6u3/image/upload/v1784138426/hero_01_sg6mqx.png",
     alt: "Featured product styled in a minimal setting",
   },
   {
@@ -42,7 +42,7 @@ export const SLIDES: HeroSlideProps[] = [
     primaryCta: "Explore",
     primaryHref: "/shop",
     secondaryHref: "/about",
-    imageUrl: "/assets/hero/hero_02.png",
+    imageUrl: "https://res.cloudinary.com/dqylma6u3/image/upload/v1784138446/hero_02_puhojb.png",
     alt: "Product detail shown in natural light",
   },
 ];
